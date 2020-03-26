@@ -19,6 +19,13 @@ __running on port `80`, using `my-module-bucket` for storage:__
 
 `docker run -p 80:80 erikvanbrakel/anthology --port=80 --backend=s3 --s3.bucket=my-module-bucket`
 
+@todo - integrate mino storage for on-prem. implementation:
+
+```
+docker pull minio/mc
+See also: https://github.com/rmb938/tf-registry/blob/master/hack/docker-compose.yaml
+```
+
 __using docker-compose__
 ```yaml
 version: '2.1'
