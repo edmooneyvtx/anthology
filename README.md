@@ -19,9 +19,10 @@ __running on port `80`, using `my-module-bucket` for storage:__
 
 `docker run -p 80:80 erikvanbrakel/anthology --port=80 --backend=s3 --s3.bucket=my-module-bucket`
 
-* @todo - integrate mino storage for on-prem. implementation:
+* @todo - integrate mino storage for on-prem. implementation: stubbed in compose.
 
 * @todo - implement LetsEncrypt: https://letsencrypt.org/docs/staging-environment/
+  script the centos version: https://certbot.eff.org/lets-encrypt/centosrhel7-other
 
 ```
 docker pull minio/mc
