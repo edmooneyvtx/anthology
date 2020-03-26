@@ -22,7 +22,7 @@ __running on port `80`, using `my-module-bucket` for storage:__
 * @todo - integrate mino storage for on-prem. implementation: stubbed in compose.
 
 * @todo - implement LetsEncrypt: https://letsencrypt.org/docs/staging-environment/
-  script the centos version: https://certbot.eff.org/lets-encrypt/centosrhel7-other
+  script the centos version: https://certbot.eff.org/lets-encrypt/centosrhel7-other | https://github.com/geerlingguy/ansible-role-certbot (apache r-proxy w/ vhost, nginx)
 
 ```
 docker pull minio/mc
