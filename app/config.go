@@ -12,6 +12,7 @@ type CommonOptions struct {
 	Port       int               `short:"p" long:"port" description:"Port the service listens on" default:"8080"`
 	Backend    string            `short:"b" long:"backend" choice:"s3" choice:"filesystem"`
 	S3         S3Options         `group:"S3 configuration" namespace:"s3"`
+	Mino       S3MinoOptions     `group:"S3mino configuration" namespace:"s3mino"`
 	FileSystem FileSystemOptions `group:"Filesystem configuration" namespace:"filesystem"`
 	SSLConfig  SSLOptions        `group:"SSL Configuration" namespace:"ssl"`
 }
@@ -25,6 +26,12 @@ type S3Options struct {
 	Bucket   string `long:"bucket" description:"S3 bucket to use as backing storage"`
 	Endpoint string `long:"endpoint" description:"S3 endpoint"`
 }
+
+type S3MinoOptions struct {
+	Bucket   string `long:"bucket" description:"S3 Mino bucket to use as backing storage"`
+	Endpoint string `long:"endpoint" description:"S3 Mino endpoint"`
+}
+
 
 type FileSystemOptions struct {
 	BasePath string `long:"basepath" description:"Basepath to store modules"`
