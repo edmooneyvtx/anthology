@@ -19,7 +19,9 @@ __running on port `80`, using `my-module-bucket` for storage:__
 
 `docker run -p 80:80 erikvanbrakel/anthology --port=80 --backend=s3 --s3.bucket=my-module-bucket`
 
-@todo - integrate mino storage for on-prem. implementation:
+* @todo - integrate mino storage for on-prem. implementation:
+
+* @todo - implement LetsEncrypt: https://letsencrypt.org/docs/staging-environment/
 
 ```
 docker pull minio/mc
@@ -80,6 +82,14 @@ are aware of the cost before provisioning!
 | --------------------- | --------------------------------- | -------------------------- | ------- |
 | --s3.bucket           | Name of the S3 bucket for storage | Any valid s3 bucket name   |         |
 | --s3.endpoint         | Alternative S3 endpoint           | http[s]://[hostname]:[port]|         |
+
+
+### S3 Minio backend
+| Parameter             | Description                            | Allowed                        |  Default  |
+| --------------------- | ------------------------------------- | --------------------------------|-----------|
+| --s3mino.bucket       | Name of the S3 Mino bucket for storage | Any valid s3 Mino bucket name  |           |   
+| --s3mino.endpoint     | Alternative S3 Mino endpoint           | http[s]://[hostname]:[port]    |           |
+
 
 [terraform-registry]: https://registry.terraform.io/
 [anthology-module]: https://registry.terraform.io/modules/erikvanbrakel/anthology/aws/
